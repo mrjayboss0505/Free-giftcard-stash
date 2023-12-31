@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Card Stash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        } 
+
+
+     /* sideBar  */
+     .menu-img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+                .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #c3c4c7;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav .active {
+            color: white !important;
+            background-color: #e62d04d7 !important;
+        }
+
+        .sidenav a {
+            padding: 14px 8px 14px 32px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333333;;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: rgba(0,0,0,0.1);;
+        }
+
+        .sidenav .closebtn {
+            position: relative;
+            top: 0;
+            left: 168px;
+            font-size: 36px;
+            margin-right: 50px;
+        }
+
+        #main {
+            transition: margin-right .5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+
+        .menu-bar {
+            
+            margin-bottom: 90px;
+        }
+        .menu-bar-img {
+           animation-name: load;
+           animation-duration: 3.8s;
+           animation-timing-function: ease;
+           animation-fill-mode: forwards;
+        }
+        @keyframes load {
+            from {position: relative; top: 200px; transform: scale(0.6, 0.6);}
+            to {position: relative; bottom: 0px; transform: scale(1, 1);}
+        }
+        .hide {
+           position: relative;
+           top: 1000px;
+           animation-name: load1;
+           animation-duration: 1s;
+           animation-delay: 1s;
+           animation-timing-function: linear;
+           animation-fill-mode: forwards;
+        }
+        @keyframes load1 {
+            from {position: relative; top: 600px;}
+            to {position: relative; top: 0px;}
+        }
+        .menu-bar1 {
+            margin: 40px;
+        }
+        .menu-bar img, .menu-bar1 img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .menu-bar .menu-tab {
+            float: right;
+            margin-right: 80px;
+        }
+        .menu-bar .menu-tab div {
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 6px 0;
+        }
+        .rotate-img img {
+            margin: 0;
+            padding: 0;
+        }
+        .rotate-img {
+           display: flex;
+           justify-content: center;
+           
+        }
+
+        /* move1  */
+        @keyframes move1 {
+            0% {transform: rotate(-6deg) translate(117px, 0px) scale(1.2, 1.2);
+                z-index: -1;
+                opacity: 0.8;
+        }
+            50% {transform: rotate(0deg) translate(222px, 0px) scale(1.2, 1.2);
+                z-index: 1;
+                opacity: 1;
+            }
+            100% {transform: rotate(6deg) translate(320px, -49px) scale(1.2, 1.2);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            
+        }
+        @-webkit-keyframes move1 {
+            0% {-webkit-transform: rotate(-6deg) translate(117px, 0px) scale(1.2, 1.2);
+                z-index: -1;
+                opacity: 0.8;
+        }
+            50% {-webkit-transform: rotate(0deg) translate(222px, 0px) scale(1.2, 1.2);
+                z-index: 1;
+                opacity: 1;
+            }
+            100% {-webkit-transform: rotate(6deg) translate(320px, -49px) scale(1.2, 1.2);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            
+        }
+       .rotate-img .img1 {
+            position: relative;
+            transform: rotate(-6deg) translate(117px, 0px) scale(1.2, 1.2);
+            /* transform: rotate(0deg) translate(222px, 0px) scale(1.2, 1.2);
+            transform: rotate(6deg) translate(320px, -49px) scale(1.2, 1.2); */
+            z-index: -1;
+            opacity: 0.8;
+            animation-name: move1;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+            -webkit-transform: rotate(-6deg) translate(117px, 0px) scale(1.2, 1.2);
+            -webkit-animation-name: move1;
+            -webkit-animation-duration: 2.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-delay: 1.5s;
+       }
+
+       .img1 h2 {
+        text-align: center;
+        position: relative;
+        bottom: 75px;
+        color: white;
+        font-size: 22px;
+       }
+    
+       /* move2  */
+       @keyframes move2 {
+        0% {
+            transform: rotate(0deg) translate(0px, 0px) scale(1.2, 1.2);
+            z-index: 1;
+            opacity: 1;
+        }
+        50% {
+            transform: rotate(6deg) translate(100px, -23px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        100% {
+            transform: rotate(-6deg) translate(-100px, -23px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+    
+       }
+       @-webkit-keyframes move2 {
+        0% {
+            -webkit-transform: rotate(0deg) translate(0px, 0px) scale(1.2, 1.2);
+            z-index: 1;
+            opacity: 1;
+        }
+        50% {
+            -webkit-transform: rotate(6deg) translate(100px, -23px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        100% {
+            -webkit-transform: rotate(-6deg) translate(-100px, -23px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+    
+       }  
+        .rotate-img .img2 {
+            position: relative;
+            transform: rotate(0deg) translate(0px, 0px) scale(1.2, 1.2);
+            /* transform: rotate(6deg) translate(100px, -23px) scale(1.2, 1.2);
+            transform: rotate(-6deg) translate(-100px, -23px) scale(1.2, 1.2); */
+            z-index: 1;
+            opacity: 1;
+            animation-name: move2;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+
+            -webkit-transform: rotate(0deg) translate(0px, 0px) scale(1.2, 1.2);
+            -webkit-animation-name: move2;
+            -webkit-animation-duration: 2.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-delay: 1.5s;
+       }
+
+       .img2 h2 {
+        text-align: center;
+        position: relative;
+        bottom: 75px;
+        color: white;
+        font-size: 22px;
+       }
+       
+       /* Move3  */
+       @keyframes move3 {
+        0% {
+            transform: rotate(6deg) translate(-117px, 0px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        50% {
+            transform: rotate(-6deg) translate(-317px, -49px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        100% {
+            transform: rotate(0deg) translate(-220px, 0px) scale(1.2, 1.2);
+            z-index: 1;
+            opacity: 1;
+        }
+       }
+       @-webkit-keyframes move3 {
+        0% {
+            -webkit-transform: rotate(6deg) translate(-117px, 0px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        50% {
+            -webkit-transform: rotate(-6deg) translate(-317px, -49px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        100% {
+            -webkit-transform: rotate(0deg) translate(-220px, 0px) scale(1.2, 1.2);
+            z-index: 1;
+            opacity: 1;
+        }
+       }
+       .rotate-img .img3 {
+            position: relative;
+            transform: rotate(6deg) translate(-117px, 0px) scale(1.2, 1.2);
+            /* transform: rotate(-6deg) translate(-317px, -49px) scale(1.2, 1.2);
+            transform: rotate(0deg) translate(-220px, 0px) scale(1.2, 1.2); */
+            z-index: -1;
+            opacity: 0.8;
+            animation-name: move3;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+
+            -webkit-transform: rotate(6deg) translate(-117px, 0px) scale(1.2, 1.2);
+            -webkit-animation-name: move3;
+            -webkit-animation-duration: 2.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-delay: 1.5s;
+       }
+
+       .img3 h2 {
+        text-align: center;
+        position: relative;
+        bottom: 75px;
+        color: white;
+        font-size: 22px;
+       }
+
+
+       .heading {
+        margin: 60px 0 60px;
+       }
+       .heading h1 {
+        text-align: center;
+        font-weight: 700;
+       }
+
+       .accordion {
+        padding: 20px 0;
+        border: none;
+        width: 100%;
+        outline: none;
+        cursor: pointer;
+        transition: 0.4s;
+       }
+       .accordion img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+       }
+
+       .panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+       }
+
+       .panel p {
+        margin: 10px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+       }
+
+       .panel a {
+        display: block;
+        margin: auto;
+        margin-bottom: 24px;
+        border: none;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 7px;
+        color: white;
+        font-size: 16px;
+        font-weight: 800;
+        width: 280px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+       }
+       .block{
+        width: 100%;
+        margin: 0;
+       }
+       
+
+       @media screen and (max-width: 480px) {
+            .sidenav {
+                z-index: 2;
+            }
+            /* move1  */
+            @keyframes move1 {
+                0% {transform: rotate(-6deg) translate(137px, 0px) scale(0.8, 0.8);
+                    z-index: -1;
+                    opacity: 0.8;
+            }
+                50% {transform: rotate(0deg) translate(222px, 0px) scale(0.8, 0.8);
+                    z-index: 1;
+                    opacity: 1;
+                }
+                100% {transform: rotate(6deg) translate(303px, -45px) scale(0.8, 0.8);
+                    z-index: -1;
+                    opacity: 0.8;
+                }
+                
+            }
+            @-webkit-keyframes move1 {
+                0% {-webkit-transform: rotate(-6deg) translate(137px, 0px) scale(0.8, 0.8);
+                    z-index: -1;
+                    opacity: 0.8;
+            }
+                50% {-webkit-transform: rotate(0deg) translate(222px, 0px) scale(0.8, 0.8);
+                    z-index: 1;
+                    opacity: 1;
+                }
+                100% {-webkit-transform: rotate(6deg) translate(303px, -45px) scale(0.8, 0.8);
+                    z-index: -1;
+                    opacity: 0.8;
+                }
+                
+            }
+        .rotate-img .img1 {
+                position: relative;
+                transform: rotate(-6deg) translate(137px, 0px) scale(0.8, 0.8);
+                -webkit-transform: rotate(-6deg) translate(137px, 0px) scale(0.8, 0.8);
+                /* transform: rotate(0deg) translate(222px, 0px) scale(0.8, 0.8);
+                transform: rotate(6deg) translate(303px, -45px) scale(0.8, 0.8); */
+        }
+
+        
+        /* move2  */
+        @keyframes move2 {
+            0% {
+                transform: rotate(0deg) translate(0px, 0px) scale(0.8, 0.8);
+                z-index: 1;
+                opacity: 1;
+            }
+            50% {
+                transform: rotate(6deg) translate(85px, -23px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(-6deg) translate(-85px, -23px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+        
+        }
+        @-webkit-keyframes move2 {
+            0% {
+                -webkit-transform: rotate(0deg) translate(0px, 0px) scale(0.8, 0.8);
+                z-index: 1;
+                opacity: 1;
+            }
+            50% {
+                -webkit-transform: rotate(6deg) translate(85px, -23px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                -webkit-transform: rotate(-6deg) translate(-85px, -23px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+        
+        }
+        .rotate-img .img2 {
+                position: relative;
+                transform: rotate(0deg) translate(0px, 0px) scale(0.8, 0.8);
+                -webkit-transform: rotate(0deg) translate(0px, 0px) scale(0.8, 0.8);
+                /* transform: rotate(6deg) translate(85px, -23px) scale(0.8, 0.8);
+                transform: rotate(-6deg) translate(-85px, -23px) scale(0.8, 0.8); */
+        }
+
+        
+        /* Move3  */
+        @keyframes move3 {
+            0% {
+                transform: rotate(6deg) translate(-137px, 0px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            50% {
+                transform: rotate(-6deg) translate(-298px, -47px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(0deg) translate(-220px, 0px) scale(0.8, 0.8);
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes move3 {
+            0% {
+                -webkit-transform: rotate(6deg) translate(-137px, 0px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            50% {
+                -webkit-transform: rotate(-6deg) translate(-298px, -47px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                -webkit-transform: rotate(0deg) translate(-220px, 0px) scale(0.8, 0.8);
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+        .rotate-img .img3 {
+                position: relative;
+                transform: rotate(6deg) translate(-137px, 0px) scale(0.8, 0.8);
+                -webkit-transform: rotate(6deg) translate(-137px, 0px) scale(0.8, 0.8);
+                /* transform: rotate(-6deg) translate(-298px, -47px) scale(0.8, 0.8);
+                transform: rotate(0deg) translate(-220px, 0px) scale(0.8, 0.8); */
+        }
+        .menu-bar .menu-tab {
+            float: right;
+            margin-right: 25px;
+        }
+        .sidenav .closebtn {
+            margin-right: 0px;
+        }
+        
+       }
+
+
+
+       @media screen and (max-width: 300px) {
+        /* move1  */
+        @keyframes move1 {
+                0% {transform: rotate(-6deg) translate(170px, 10px) scale(0.6, 0.6);
+                    z-index: -1;
+                    opacity: 0.8;
+            }
+                50% {transform: rotate(0deg) translate(222px, 0px) scale(0.6, 0.6);
+                    z-index: 1;
+                    opacity: 1;
+                }
+                100% {transform: rotate(6deg) translate(267px, -35px) scale(0.6, 0.6);
+                    z-index: -1;
+                    opacity: 0.8;
+                }
+                
+            }
+            @-webkit-keyframes move1 {
+                0% {-webkit-transform: rotate(-6deg) translate(170px, 10px) scale(0.6, 0.6);
+                    z-index: -1;
+                    opacity: 0.8;
+            }
+                50% {-webkit-transform: rotate(0deg) translate(222px, 0px) scale(0.6, 0.6);
+                    z-index: 1;
+                    opacity: 1;
+                }
+                100% {-webkit-transform: rotate(6deg) translate(267px, -35px) scale(0.6, 0.6);
+                    z-index: -1;
+                    opacity: 0.8;
+                }
+                
+            }
+        .rotate-img .img1 {
+                position: relative;
+                transform: rotate(-6deg) translate(170px, 10px) scale(0.6, 0.6);
+                -webkit-transform: rotate(-6deg) translate(170px, 10px) scale(0.6, 0.6);
+                /* transform: rotate(0deg) translate(222px, 0px) scale(0.5, 0.5); */
+                /* transform: rotate(6deg) translate(267px, -35px) scale(0.5, 0.5); */
+        }
+
+        
+        /* move2  */
+        @keyframes move2 {
+            0% {
+                transform: rotate(0deg) translate(0px, 0px) scale(0.6, 0.6);
+                z-index: 1;
+                opacity: 1;
+            }
+            50% {
+                transform: rotate(6deg) translate(48px, -13px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(-6deg) translate(-48px, -13px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+        
+        }
+        @-webkit-keyframes move2 {
+            0% {
+                -webkit-transform: rotate(0deg) translate(0px, 0px) scale(0.6, 0.6);
+                z-index: 1;
+                opacity: 1;
+            }
+            50% {
+                -webkit-transform: rotate(6deg) translate(48px, -13px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                -webkit-transform: rotate(-6deg) translate(-48px, -13px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+        
+        }
+        .rotate-img .img2 {
+                position: relative;
+                transform: rotate(0deg) translate(0px, 0px) scale(0.6, 0.6);
+                -webkit-transform: rotate(0deg) translate(0px, 0px) scale(0.6, 0.6);
+                /* transform: rotate(6deg) translate(48px, -13px) scale(0.5, 0.5); */
+                /* transform: rotate(-6deg) translate(-48px, -13px) scale(0.5, 0.5); */
+        }
+
+        
+        /* Move3  */
+        @keyframes move3 {
+            0% {
+                transform: rotate(6deg) translate(-170px, 10px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            50% {
+                transform: rotate(-6deg) translate(-268px, -37px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(0deg) translate(-220px, 0px) scale(0.6, 0.6);
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes move3 {
+            0% {
+                -webkit-transform: rotate(6deg) translate(-170px, 10px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            50% {
+                -webkit-transform: rotate(-6deg) translate(-268px, -37px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                -webkit-transform: rotate(0deg) translate(-220px, 0px) scale(0.6, 0.6);
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+        .rotate-img .img3 {
+                position: relative;
+                transform: rotate(6deg) translate(-170px, 10px) scale(0.6, 0.6);
+                -webkit-transform: rotate(6deg) translate(-170px, 10px) scale(0.6, 0.6);
+                /* transform: rotate(-6deg) translate(-268px, -37px) scale(0.5, 0.5); */
+                /* transform: rotate(0deg) translate(-220px, 0px) scale(0.5, 0.5); */
+        }
+        .heading h1 {
+            font-size: 20px;
+        }
+        .menu-bar .menu-tab {
+            float: right;
+            margin-right: 5px;
+        }
+        @-webkit-keyframes load {
+            from {position: relative; top: 200px; transform: scale(0.3, 0.3);}
+            to {position: relative; bottom: 0px; transform: scale(0.7, 0.7);}
+        }
+        .head1 {
+        margin: 0px 0 15px;
+       }
+       .footer-img {
+        transform: scale(0.7,0.7);
+        -webkit-transform: scale(0.7,0.7);
+       }
+       .menu-bar {
+            margin-bottom: 30px;
+        }
+        .rotate-img {
+           display: flex;
+           justify-content: center;
+           margin-left: 50px;
+        }
+        .info p {
+        margin-bottom: 23px;
+        line-height: 29px;
+        font-size: 16px;
+       }
+       .info h2 {
+        font-size: 18px;
+       }
+       }
+    </style>
+
+</head>
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <img src="logo.png" alt="error" width="100px" class="menu-img">
+        <a href="amazon.html">Amazon</a>
+        <a href="xbox.html">Xbox</a>
+        <a href="steam.html">Steam</a>
+        <a href="spotify.html">Spotify</a>
+        <a href="Nintendo-switch.html">Ninetendo Switch</a>
+        <a href="paypal.html">Paypal</a>
+        <a href="uber-eats.html">Uber Eats</a>
+        <a href="domino's-pizza.html">Domino's Pizza</a>
+        <a href="ebay.html">Ebay</a>
+        <a href="cash-app.html">Cash App</a>
+        <a href="doordash.html">Doordash</a>
+        <a href="Victoria-secret.html">Victoria Secret</a>
+        <a href="target.html">Target</a>
+      </div>
+
+    <div id="main">
+        <div class="menu-bar">
+            <div class="menu-bar-img">
+                <img src="logo.png" alt="error" width="150px">
+            </div>
+            <div class="hide">
+                <span style="cursor: pointer;" onclick="openNav()">
+                    <div class="menu-tab">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </span>
+            </div>
+        </div>
+       <div class="hide">
+        <div class="rotate-img">
+            <img src="amazon.png" alt="" width="220px" class="img1">
+            <img src="paypal.png" alt="" width="220px" class="img2">
+            <img src="xbox.png" alt="" width="220px" class="img3">
+        </div>
+    
+        <div class="heading">
+            <h1>DO YOU WANT </h1><br>
+            <h1>SOME FREE</h1><br>
+            <h1>GIFT CARDS</h1>
+        </div>
+    
+        <div class="Amazon block">
+            <button class="accordion" style="background-color: #ff9900;"> 
+                <img src="amazon-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #ff9900;">
+                    <p>Get free Amazon Gift Card code and <br>
+                    buy anything for free on amazon.</p>
+                    <a href="amazon.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Xbox block">
+            <button class="accordion" style="background-color: #107c10;"> 
+                <img src="xbox-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #107c10;">
+                    <p>Get free Xbox Gift Card code and <br>
+                    buy anything for free on xbox.</p>
+                    <a href="xbox.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Steam block">
+            <button class="accordion" style="background-color: #66c0f4;"> 
+                <img src="steam-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #66c0f4;">
+                    <p>Get free Steam Gift Card code and <br>
+                    buy anything for free on steam.</p>
+                    <a href="steam.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Spotify block">
+            <button class="accordion" style="background-color: #1ed760;"> 
+                <img src="spotify-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #1ed760">
+                    <p>Get free Spotify Gift Card code and <br>
+                    buy anything for free on spotify.</p>
+                    <a href="spotify.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Ninetendo-Switch block">
+            <button class="accordion" style="background-color: #00c3e3;"> 
+                <img src="ninetendo-switch-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #00c3e3;">
+                    <p>Get free Ninetendo Switch Gift Card code and <br>
+                    buy anything for free on ninetendo switch.</p>
+                    <a href="Nintendo-switch.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="PayPal block">
+            <button class="accordion" style="background-color: #0079c1;"> 
+                <img src="paypal-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #0079c1;">
+                    <p>Get free PayPal Gift Card code and <br>
+                    buy anything for free on paypal.</p>
+                    <a href="paypal.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Uber-Eats block">
+            <button class="accordion" style="background-color: #60b524;;"> 
+                <img src="ubereats.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #60b524;;">
+                    <p>Get free Uber Eats Gift Card code and <br>
+                    buy anything for free on uber eats.</p>
+                    <a href="uber-eats.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Domino's-Pizza block">
+            <button class="accordion " style="background-color: #ff4554;"> 
+                <img src="domino's-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #ff4554;">
+                    <p>Get free Domino's Pizza Gift Card code and <br>
+                    buy anything for free on domino's pizza.</p>
+                    <a href="domino's-pizza.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Ebay block">
+            <button class="accordion" style="background-color: #e53239;"> 
+                <img src="ebay-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #e53239;">
+                    <p>Get free Ebay Gift Card code and <br>
+                    buy anything for free on ebay.</p>
+                    <a href="ebay.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Cash-App block">
+            <button class="accordion" style="background-color: #00d632;;"> 
+                <img src="cash-app-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #00d632;">
+                    <p>Get free Cash App Gift Card code and <br>
+                    buy anything for free on cash app.</p>
+                    <a href="cash-app.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Doordash block">
+            <button class="accordion" style="background-color: #ff0000"> 
+                <img src="door-dash-logo.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #ff0000">
+                    <p>Get free Doordash Gift Card code and <br>
+                    buy anything for free on doordash.</p>
+                    <a href="doordash.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Victoria-Secret block">
+            <button class="accordion" style="background-color: #f37cb4;;"> 
+                <img src="victoriasecret.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #f37cb4;">
+                    <p>Get free Victoria Secret Gift Card code and <br>
+                    buy anything for free on ultra-card.</p>
+                    <a href="Victoria-secret.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="Target block">
+            <button class="accordion aliexpress" style="background-color: #c60000;"> 
+                <img src="target.png" alt="" width="100px">
+            </button>
+                <div class="panel" style="background-color: #c60000;">
+                    <p>Get free Target Gift Card code and <br>
+                    buy anything for free on target.</p>
+                    <a href="target.html">GET YOURS NOW</a>
+                </div>
+        </div>
+    
+        <div class="menu-bar1">
+            <img src="logo.png" alt="error" width="120px">
+        </div>
+       </div>
+    </div>
+
+<script>
+// sidebar code 
+    function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginRight = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginRight= "0";
+            }
+
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+    });
+    }
+</script>
+</body>
+</html>

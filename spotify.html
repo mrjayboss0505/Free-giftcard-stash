@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free-spotify-gift-cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        } 
+        body{
+            background-color: #f1f1f1;
+        }
+
+        /* sideBar  */
+        .menu-img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+                .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #c3c4c7;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .active {
+            color: white !important;
+            background-color: #1ed760 !important;
+        }
+
+        .sidenav {
+            z-index: 2;
+        }
+        .sidenav a {
+            padding: 14px 8px 14px 32px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333333;;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: rgba(0,0,0,0.1);;
+        }
+
+        .sidenav .closebtn {
+            position: relative;
+            top: 0;
+            left: 168px;
+            font-size: 36px;
+            margin-right: 50px;
+        }
+
+        #main {
+            transition: margin-right .5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+
+
+        .menu-bar {
+            margin-bottom: 90px;
+        }
+        .menu-bar-img {
+           animation-name: load;
+           animation-duration: 3.8s;
+           animation-timing-function: ease;
+           animation-fill-mode: forwards;
+           -webkit-animation-name: load;
+           -webkit-animation-duration: 3.8s;
+           -webkit-animation-timing-function: ease;
+           -webkit-animation-fill-mode: forwards;
+        }
+        @keyframes load {
+            from {position: relative; top: 200px; transform: scale(0.6, 0.6);}
+            to {position: relative; bottom: 0px; transform: scale(1, 1);}
+        }
+        @-webkit-keyframes load {
+            from {position: relative; top: 200px; transform: scale(0.6, 0.6);}
+            to {position: relative; bottom: 0px; transform: scale(1, 1);}
+        }
+        .hide {
+           position: relative;
+           top: 1000px;
+           animation-name: load1;
+           animation-duration: 1s;
+           animation-delay: 1s;
+           animation-timing-function: linear;
+           animation-fill-mode: forwards;
+           -webkit-animation-name: load1;
+           -webkit-animation-duration: 1s;
+           -webkit-animation-delay: 1s;
+           -webkit-animation-timing-function: linear;
+           -webkit-animation-fill-mode: forwards;
+        }
+        @keyframes load1 {
+            from {position: relative; top: 600px;}
+            to {position: relative; top: 0px;}
+        }
+        @-webkit-keyframes load1 {
+            from {position: relative; top: 600px;}
+            to {position: relative; top: 0px;}
+        }
+        .menu-bar1 {
+            margin: 40px;
+        }
+        .menu-bar img, .menu-bar1 img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .menu-bar .menu-tab {
+            float: right;
+            margin-right: 80px;
+        }
+        .menu-bar .menu-tab div {
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 6px 0;
+        }
+        .rotate-img img {
+            margin: 0;
+            padding: 0;
+        }
+        .rotate-img {
+           display: flex;
+           justify-content: center;
+           
+        }
+
+        /* move1  */
+        @keyframes move1 {
+            0% {transform: rotate(-6deg) translate(117px, 0px) scale(1.2, 1.2);
+                z-index: -1;
+                opacity: 0.8;
+        }
+            50% {transform: rotate(0deg) translate(222px, 0px) scale(1.2, 1.2);
+                z-index: 1;
+                opacity: 1;
+            }
+            100% {transform: rotate(6deg) translate(320px, -49px) scale(1.2, 1.2);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            
+        }
+        @-webkit-keyframes move1 {
+            0% {-webkit-transform: rotate(-6deg) translate(117px, 0px) scale(1.2, 1.2);
+                z-index: -1;
+                opacity: 0.8;
+        }
+            50% {-webkit-transform: rotate(0deg) translate(222px, 0px) scale(1.2, 1.2);
+                z-index: 1;
+                opacity: 1;
+            }
+            100% {-webkit-transform: rotate(6deg) translate(320px, -49px) scale(1.2, 1.2);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            
+        }
+       .rotate-img .img1 {
+            position: relative;
+            transform: rotate(-6deg) translate(117px, 0px) scale(1.2, 1.2);
+            /* transform: rotate(0deg) translate(222px, 0px) scale(1.2, 1.2);
+            transform: rotate(6deg) translate(320px, -49px) scale(1.2, 1.2); */
+            z-index: -1;
+            opacity: 0.8;
+            animation-name: move1;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+            -webkit-transform: rotate(-6deg) translate(117px, 0px) scale(1.2, 1.2);
+            -webkit-animation-name: move1;
+            -webkit-animation-duration: 2.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-delay: 1.5s;
+       }
+
+       .img1 h2 {
+        text-align: center;
+        position: relative;
+        bottom: 75px;
+        color: white;
+        font-size: 22px;
+       }
+    
+       /* move2  */
+       @keyframes move2 {
+        0% {
+            transform: rotate(0deg) translate(0px, 0px) scale(1.2, 1.2);
+            z-index: 1;
+            opacity: 1;
+        }
+        50% {
+            transform: rotate(6deg) translate(100px, -23px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        100% {
+            transform: rotate(-6deg) translate(-100px, -23px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+    
+       }
+       @-webkit-keyframes move2 {
+        0% {
+            -webkit-transform: rotate(0deg) translate(0px, 0px) scale(1.2, 1.2);
+            z-index: 1;
+            opacity: 1;
+        }
+        50% {
+            -webkit-transform: rotate(6deg) translate(100px, -23px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        100% {
+            -webkit-transform: rotate(-6deg) translate(-100px, -23px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+    
+       }  
+        .rotate-img .img2 {
+            position: relative;
+            transform: rotate(0deg) translate(0px, 0px) scale(1.2, 1.2);
+            /* transform: rotate(6deg) translate(100px, -23px) scale(1.2, 1.2);
+            transform: rotate(-6deg) translate(-100px, -23px) scale(1.2, 1.2); */
+            z-index: 1;
+            opacity: 1;
+            animation-name: move2;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+
+            -webkit-transform: rotate(0deg) translate(0px, 0px) scale(1.2, 1.2);
+            -webkit-animation-name: move2;
+            -webkit-animation-duration: 2.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-delay: 1.5s;
+       }
+
+       .img2 h2 {
+        text-align: center;
+        position: relative;
+        bottom: 75px;
+        color: white;
+        font-size: 22px;
+       }
+       
+       /* Move3  */
+       @keyframes move3 {
+        0% {
+            transform: rotate(6deg) translate(-117px, 0px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        50% {
+            transform: rotate(-6deg) translate(-317px, -49px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        100% {
+            transform: rotate(0deg) translate(-220px, 0px) scale(1.2, 1.2);
+            z-index: 1;
+            opacity: 1;
+        }
+       }
+       @-webkit-keyframes move3 {
+        0% {
+            -webkit-transform: rotate(6deg) translate(-117px, 0px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        50% {
+            -webkit-transform: rotate(-6deg) translate(-317px, -49px) scale(1.2, 1.2);
+            z-index: -1;
+            opacity: 0.8;
+        }
+        100% {
+            -webkit-transform: rotate(0deg) translate(-220px, 0px) scale(1.2, 1.2);
+            z-index: 1;
+            opacity: 1;
+        }
+       }
+       .rotate-img .img3 {
+            position: relative;
+            transform: rotate(6deg) translate(-117px, 0px) scale(1.2, 1.2);
+            /* transform: rotate(-6deg) translate(-317px, -49px) scale(1.2, 1.2);
+            transform: rotate(0deg) translate(-220px, 0px) scale(1.2, 1.2); */
+            z-index: -1;
+            opacity: 0.8;
+            animation-name: move3;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+
+            -webkit-transform: rotate(6deg) translate(-117px, 0px) scale(1.2, 1.2);
+            -webkit-animation-name: move3;
+            -webkit-animation-duration: 2.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-delay: 1.5s;
+       }
+
+       .img3 h2 {
+        text-align: center;
+        position: relative;
+        bottom: 75px;
+        color: white;
+        font-size: 22px;
+       }
+
+       .heading {
+        margin: 60px 0 30px;
+       }
+       .heading h1 {
+        text-align: center;
+        font-weight: 700;
+
+       }
+
+       .info {
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        padding: 32px;
+       }
+       .info button {
+        border: none;
+        width: 100%;
+        background-color: #1ed760;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+       }
+       .info p {
+        margin-bottom: 23px;
+        line-height: 39px;
+        font-size: 20px;
+       }
+       .info h2 {
+        margin: 14px;
+       }
+       .show {
+        display: block;
+       }
+       .panel {
+        display: none;
+       }
+       .select-img {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+       }
+       .select img {
+        margin-bottom: 17px;
+       }
+       .select .card-box h2{
+        position: relative;
+        top: -90px;
+       }
+       .footer-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       }
+       .footer {
+        padding: 20px;
+       }
+    
+       .card-box h2 {
+        text-align: center;
+        position: relative;
+        bottom: 65px;
+        color: white;
+        font-size: 22px;
+       }
+
+
+       /* Generator  */
+       #overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 2;
+        cursor: pointer;
+    }
+        #overlay .card-box {
+            width: 295px;
+            height: 475px;
+            background-color: #1ed760;
+            border-radius: 20px;
+            display: block;
+            margin: auto;
+            margin-top: 70px;
+            box-shadow: 0px 2px 5px rgb(27, 27, 27);
+        }
+        #overlay .card-box img {
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            top: 100px;
+            margin-bottom: 16px;
+        }
+        #overlay .circle {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 102px;
+            z-index: 1;
+            position: relative;
+            top: 25px;
+            right: 1px;
+        }
+        #overlay .circle1 {
+            opacity: 1;
+        }
+        #overlay .circle2 {
+            opacity: 0;
+            animation: circle-fade 0.1s linear 7.5s;
+            animation-fill-mode: forwards;
+            -webkit-animation: circle-fade 0.1s linear 7.5s;
+            -webkit-animation-fill-mode: forwards;
+        }
+        @keyframes circle-fade {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @-webkit-keyframes circle-fade {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        #overlay .circle3 {
+            opacity: 0;
+            margin-right: 0px;
+            animation: circle-fade1 0.1s linear 15s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes circle-fade1 {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @-webkit-keyframes circle-fade1 {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        #overlay .circle-bar {
+            position: relative;
+            top: 15px;
+            width: 236px;
+            background: rgba(39, 38, 38, 0.541);
+            height: 4px;
+            /* z-index: 1; */
+        }
+        #overlay .circle-bar1 {
+            position: relative;
+            top: 11px;
+            width: 0px;
+            height: 4px;
+            z-index: 1;
+            animation: circle-bar-load 15s linear;
+            animation-fill-mode: forwards;
+        }
+        @keyframes circle-bar-load {
+            from {width: 0px;}
+            to{ width: 236px;}
+        }
+        @-webkit-keyframes circle-bar-load {
+            from {width: 0px;}
+            to{ width: 236px;}
+        }
+        #overlay .stepname {
+            display: inline-block;
+            font-size: 12px;
+            margin-right: 34px;
+            text-align: center;
+        }
+        #overlay .step {
+            position: relative;
+            top: 40px;
+            left: 30px;
+            color: white;
+        }
+        #randomOutput {
+            text-align: center;
+            position: relative;
+            top: 100px;
+            font-size: 26px;
+            color: white;
+        }
+        #textDisplay {
+            position: relative;
+            top: 108px;
+            text-align: center;
+            color: white;
+        }
+       #widgetholder {
+        display: none;
+        width: 100;
+        margin: 0 25px;
+        position: relative;
+        top: 80px;
+       }
+       #widgetholder iframe {
+        border-radius: 4px;
+       }
+
+
+
+       @media screen and (max-width: 480px) {
+            .sidenav {
+                z-index: 2;
+            }
+            /* move1  */
+            @keyframes move1 {
+                0% {transform: rotate(-6deg) translate(137px, 0px) scale(0.8, 0.8);
+                    z-index: -1;
+                    opacity: 0.8;
+            }
+                50% {transform: rotate(0deg) translate(222px, 0px) scale(0.8, 0.8);
+                    z-index: 1;
+                    opacity: 1;
+                }
+                100% {transform: rotate(6deg) translate(303px, -45px) scale(0.8, 0.8);
+                    z-index: -1;
+                    opacity: 0.8;
+                }
+                
+            }
+            @-webkit-keyframes move1 {
+                0% {-webkit-transform: rotate(-6deg) translate(137px, 0px) scale(0.8, 0.8);
+                    z-index: -1;
+                    opacity: 0.8;
+            }
+                50% {-webkit-transform: rotate(0deg) translate(222px, 0px) scale(0.8, 0.8);
+                    z-index: 1;
+                    opacity: 1;
+                }
+                100% {-webkit-transform: rotate(6deg) translate(303px, -45px) scale(0.8, 0.8);
+                    z-index: -1;
+                    opacity: 0.8;
+                }
+                
+            }
+        .rotate-img .img1 {
+                position: relative;
+                transform: rotate(-6deg) translate(137px, 0px) scale(0.8, 0.8);
+                -webkit-transform: rotate(-6deg) translate(137px, 0px) scale(0.8, 0.8);
+                /* transform: rotate(0deg) translate(222px, 0px) scale(0.8, 0.8);
+                transform: rotate(6deg) translate(303px, -45px) scale(0.8, 0.8); */
+        }
+
+        
+        /* move2  */
+        @keyframes move2 {
+            0% {
+                transform: rotate(0deg) translate(0px, 0px) scale(0.8, 0.8);
+                z-index: 1;
+                opacity: 1;
+            }
+            50% {
+                transform: rotate(6deg) translate(85px, -23px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(-6deg) translate(-85px, -23px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+        
+        }
+        @-webkit-keyframes move2 {
+            0% {
+                -webkit-transform: rotate(0deg) translate(0px, 0px) scale(0.8, 0.8);
+                z-index: 1;
+                opacity: 1;
+            }
+            50% {
+                -webkit-transform: rotate(6deg) translate(85px, -23px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                -webkit-transform: rotate(-6deg) translate(-85px, -23px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+        
+        }
+        .rotate-img .img2 {
+                position: relative;
+                transform: rotate(0deg) translate(0px, 0px) scale(0.8, 0.8);
+                -webkit-transform: rotate(0deg) translate(0px, 0px) scale(0.8, 0.8);
+                /* transform: rotate(6deg) translate(85px, -23px) scale(0.8, 0.8);
+                transform: rotate(-6deg) translate(-85px, -23px) scale(0.8, 0.8); */
+        }
+
+        
+        /* Move3  */
+        @keyframes move3 {
+            0% {
+                transform: rotate(6deg) translate(-137px, 0px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            50% {
+                transform: rotate(-6deg) translate(-298px, -47px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(0deg) translate(-220px, 0px) scale(0.8, 0.8);
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes move3 {
+            0% {
+                -webkit-transform: rotate(6deg) translate(-137px, 0px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            50% {
+                -webkit-transform: rotate(-6deg) translate(-298px, -47px) scale(0.8, 0.8);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                -webkit-transform: rotate(0deg) translate(-220px, 0px) scale(0.8, 0.8);
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+        .rotate-img .img3 {
+                position: relative;
+                transform: rotate(6deg) translate(-137px, 0px) scale(0.8, 0.8);
+                -webkit-transform: rotate(6deg) translate(-137px, 0px) scale(0.8, 0.8);
+                /* transform: rotate(-6deg) translate(-298px, -47px) scale(0.8, 0.8);
+                transform: rotate(0deg) translate(-220px, 0px) scale(0.8, 0.8); */
+        }
+        .menu-bar .menu-tab {
+            float: right;
+            margin-right: 25px;
+        }
+        .sidenav .closebtn {
+            margin-right: 0px;
+        }
+        
+       }
+
+
+
+       @media screen and (max-width: 300px) {
+        /* move1  */
+        @keyframes move1 {
+                0% {transform: rotate(-6deg) translate(170px, 10px) scale(0.6, 0.6);
+                    z-index: -1;
+                    opacity: 0.8;
+            }
+                50% {transform: rotate(0deg) translate(222px, 0px) scale(0.6, 0.6);
+                    z-index: 1;
+                    opacity: 1;
+                }
+                100% {transform: rotate(6deg) translate(267px, -35px) scale(0.6, 0.6);
+                    z-index: -1;
+                    opacity: 0.8;
+                }
+                
+            }
+            @-webkit-keyframes move1 {
+                0% {-webkit-transform: rotate(-6deg) translate(170px, 10px) scale(0.6, 0.6);
+                    z-index: -1;
+                    opacity: 0.8;
+            }
+                50% {-webkit-transform: rotate(0deg) translate(222px, 0px) scale(0.6, 0.6);
+                    z-index: 1;
+                    opacity: 1;
+                }
+                100% {-webkit-transform: rotate(6deg) translate(267px, -35px) scale(0.6, 0.6);
+                    z-index: -1;
+                    opacity: 0.8;
+                }
+                
+            }
+        .rotate-img .img1 {
+                position: relative;
+                transform: rotate(-6deg) translate(170px, 10px) scale(0.6, 0.6);
+                -webkit-transform: rotate(-6deg) translate(170px, 10px) scale(0.6, 0.6);
+                /* transform: rotate(0deg) translate(222px, 0px) scale(0.5, 0.5); */
+                /* transform: rotate(6deg) translate(267px, -35px) scale(0.5, 0.5); */
+        }
+
+        
+        /* move2  */
+        @keyframes move2 {
+            0% {
+                transform: rotate(0deg) translate(0px, 0px) scale(0.6, 0.6);
+                z-index: 1;
+                opacity: 1;
+            }
+            50% {
+                transform: rotate(6deg) translate(48px, -13px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(-6deg) translate(-48px, -13px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+        
+        }
+        @-webkit-keyframes move2 {
+            0% {
+                -webkit-transform: rotate(0deg) translate(0px, 0px) scale(0.6, 0.6);
+                z-index: 1;
+                opacity: 1;
+            }
+            50% {
+                -webkit-transform: rotate(6deg) translate(48px, -13px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                -webkit-transform: rotate(-6deg) translate(-48px, -13px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+        
+        }
+        .rotate-img .img2 {
+                position: relative;
+                transform: rotate(0deg) translate(0px, 0px) scale(0.6, 0.6);
+                -webkit-transform: rotate(0deg) translate(0px, 0px) scale(0.6, 0.6);
+                /* transform: rotate(6deg) translate(48px, -13px) scale(0.5, 0.5); */
+                /* transform: rotate(-6deg) translate(-48px, -13px) scale(0.5, 0.5); */
+        }
+
+        
+        /* Move3  */
+        @keyframes move3 {
+            0% {
+                transform: rotate(6deg) translate(-170px, 10px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            50% {
+                transform: rotate(-6deg) translate(-268px, -37px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(0deg) translate(-220px, 0px) scale(0.6, 0.6);
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes move3 {
+            0% {
+                -webkit-transform: rotate(6deg) translate(-170px, 10px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            50% {
+                -webkit-transform: rotate(-6deg) translate(-268px, -37px) scale(0.6, 0.6);
+                z-index: -1;
+                opacity: 0.8;
+            }
+            100% {
+                -webkit-transform: rotate(0deg) translate(-220px, 0px) scale(0.6, 0.6);
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+        .rotate-img .img3 {
+                position: relative;
+                transform: rotate(6deg) translate(-170px, 10px) scale(0.6, 0.6);
+                -webkit-transform: rotate(6deg) translate(-170px, 10px) scale(0.6, 0.6);
+                /* transform: rotate(-6deg) translate(-268px, -37px) scale(0.5, 0.5); */
+                /* transform: rotate(0deg) translate(-220px, 0px) scale(0.5, 0.5); */
+        }
+        .heading h1 {
+            font-size: 20px;
+        }
+        .menu-bar .menu-tab {
+            float: right;
+            margin-right: 5px;
+        }
+        @-webkit-keyframes load {
+            from {position: relative; top: 200px; transform: scale(0.3, 0.3);}
+            to {position: relative; bottom: 0px; transform: scale(0.7, 0.7);}
+        }
+        .head1 {
+        margin: 0px 0 15px;
+       }
+       .footer-img {
+        transform: scale(0.7,0.7);
+        -webkit-transform: scale(0.7,0.7);
+       }
+       .menu-bar {
+            margin-bottom: 30px;
+        }
+        .rotate-img {
+           display: flex;
+           justify-content: center;
+           margin-left: 50px;
+        }
+        .info p {
+        margin-bottom: 23px;
+        line-height: 29px;
+        font-size: 16px;
+       }
+       .info h2 {
+        font-size: 18px;
+       }
+       }
+       
+       @media (height: 1368px){
+        #overlay .card-box {
+            transform: scale(1.7, 1.7);
+            -webkit-transform: scale(1.7, 1.7);
+            margin-top: 390px;
+        }
+       }
+       @media  (height: 1180px){
+        #overlay .card-box {
+            transform: scale(1.6, 1.6);
+            -webkit-transform: scale(1.6, 1.6);
+            margin-top: 330px;
+        }
+       }
+       @media (height: 915px){
+        #overlay .card-box {
+            transform: scale(1.1, 1.1);
+            -webkit-transform: scale(1.1, 1.1);
+            margin-top: 200px;
+        }
+       }
+       @media (height: 896px){
+        #overlay .card-box {
+            transform: scale(1, 1);
+            -webkit-transform: scale(1, 1);
+            margin-top: 190px;
+        }
+       }
+       @media screen and (height: 844px){
+        #overlay .card-box {
+            transform: scale(1, 1);
+            -webkit-transform: scale(1, 1);
+            margin-top: 160px;
+        }
+       }
+       @media screen and (height: 800px){
+        #overlay .card-box {
+            transform: scale(1.2, 1.2);
+            -webkit-transform: scale(1.2, 1.2);
+            margin-top: 160px;
+        }
+       } 
+       @media screen and (height: 740px){
+        #overlay .card-box {
+            transform: scale(1.1, 1.1);
+            -webkit-transform: scale(1.1, 1.1);
+            margin-top: 100px;
+        }
+       }
+       @media screen and (height: 667px){
+        #overlay .card-box {
+            transform: scale(1.1, 1.1);
+            -webkit-transform: scale(1.1, 1.1);
+            margin-top: 100px;
+        }
+       }
+       @media screen and (height: 653px){
+        #overlay .card-box {
+            transform: scale(0.7, 0.7);
+            -webkit-transform: scale(0.7, 0.7);
+            margin-top: 100px;
+        }
+       } 
+       @media screen and (height: 600px){
+        #overlay .card-box {
+            transform: scale(1, 1);
+            -webkit-transform: scale(1, 1);
+            margin-top: 70px;
+        }
+       }
+       
+    </style>
+</head>
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <img src="logo.png" alt="error" width="100px" class="menu-img">
+        <a href="amazon.html">Amazon</a>
+        <a href="xbox.html">Xbox</a>
+        <a href="steam.html">Steam</a>
+        <a href="spotify.html" class="active">Spotify</a>
+        <a href="Nintendo-switch.html">Ninetendo Switch</a>
+        <a href="paypal.html">Paypal</a>
+        <a href="uber-eats.html">Uber Eats</a>
+        <a href="domino's-pizza.html">Domino's Pizza</a>
+        <a href="ebay.html">Ebay</a>
+        <a href="cash-app.html">Cash App</a>
+        <a href="doordash.html">Doordash</a>
+        <a href="Victoria-secret.html">Victoria Secret</a>
+        <a href="target.html">Target</a>
+      </div>
+
+    <div id="main">
+        <div class="menu-bar">
+            <div class="menu-bar-img">
+                <img src="logo.png" alt="error" width="130px">
+            </div>
+            <div class="hide">
+                <span style="cursor: pointer;" onclick="openNav()">
+                    <div class="menu-tab">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </span>
+            </div>
+            <div class="loader"></div>
+        </div>
+       <div class="hide">
+        <div class="rotate-img">
+            <div class="img1">
+                <img src="spotify.png" alt="" width="220px">
+                <h2>$20</h2>
+            </div>
+           <div class="img2">
+                <img src="spotify.png" alt="" width="220px">
+                <h2>$50</h2>
+            </div>
+            <div class="img3">
+                <img src="spotify.png" alt="" width="220px">
+                <h2>$100</h2>
+            </div>
+        </div>
+    
+        <div class="heading">
+            <h1>DO YOU WANT </h1><br>
+            <h1>FREE SPOTIFY</h1><br>
+            <h1>GIFT CARDS</h1>
+        </div>
+    
+        <div class="info" style="background-color: #1ed760; width: 100%;">
+            <img src="spotify-logo.png" alt="" width="150px">
+            <p>Get free Spotify Gift Card Code and <br>
+                buy anything for free on Spotify.
+            </p>
+            <button class="accordion">READ-MORE</button>
+            <div class="panel">
+                <h2>How to get free Spotify Gift Cards</h2>
+                <p>Free Spotify Card are very easy to <br>
+                     get with our Generator. The only thing you have <br>
+                    to do is to choose your Gift Card value and wait <br>
+                    for the generator to find unused Gift Card on <br>
+                    Spotify. Get unused codes safely and <br>
+                    directly from your web browser. 
+                </p>
+    
+                <h2>How to redeem Spotify Gift Card</h2>
+                <p>Redeem your Gift Card with your mobile, tablet <br>
+                    or desktop. Go to the Spotify Store, click at <br>
+                    the menu bar and choose Redeem Code. Now <br>
+                    you only have to fill in your generate code and <br>
+                    that is all, the money will be available on your account.
+                </p>
+                <h2>How is this possible</h2>
+                <p>We do not generate new codes and push them <br>
+                     the Spotify database like other groups,<br>
+                      because this can lead to ban of your account.<br>
+                       Instead we generate random Gift Card codes and search<br>
+                        their database if they exist and can be used.</p>
+            </div>
+        </div>
+       <section class="select">
+        <div class="heading">
+            <h1>CHOOSE GIFT </h1><br>
+            <h1>CARD VALUE</h1><br>
+        </div>
+           <div class="select-img">
+           <div class="card-box" onclick="on()">
+             <img src="spotify.png" alt="" width="220px" class="img1">
+            <h2>20$ </h2>
+           </div>
+    
+            <div class="card-box" onclick="on()">
+             <img src="spotify.png" alt="" width="220px" class="img2">
+            <h2>50$ </h2>
+           </div>
+    
+           <div class="card-box" onclick="on()">
+             <img src="spotify.png" alt="" width="220px" class="img3">
+            <h2>100$ </h2>
+           </div>
+    
+           </div>
+       </section>
+       <section class="footer" style="background-color: white;">
+            <img class="footer-img" src="logo.png" alt="error" width="150px" >
+       </section>
+    </div>
+
+   <!-- Generator  -->
+   <div id="overlay">
+    <div class="card-box">
+        <div class="step">
+            <div class="stepname active" id="step1">Connecting</div>
+            <div class="stepname" id="step2">Generating</div>
+            <div class="stepname" id="step3">Completed</div>
+            <div class="circle circle1" ></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle-bar"></div>
+            <div class="circle-bar1" style="background-color: white;"></div>
+        </div>
+        <img src="spotify-logo.png" alt="" width="190px" id="card-img">
+        <div id="widgetholder"><iframe src="https://playabledownload.com/1476932" opacity="0" scrolling="yes" margin-top="0px" marginwidth="0" marginheight="0" align="middle" frameborder="0" width="100%" height="240px"></iframe></div>
+        <div id="randomOutput"></div>
+        <div id="textDisplay"></div>
+    </div>
+</div>
+<script>
+    // SideNav 
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginRight = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginRight= "0";
+    }
+
+    function myFunction() {
+    document.getElementById("read").classList.toggle("show");
+    }
+
+
+// Read-more 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+
+// Overlay Popup
+        function on() {
+    document.getElementById("overlay").style.display = "block";
+    startGenerating();
+    startDisplay();
+    }
+
+</script>
+    <script>
+// Loading message 
+        const paragraphs = ['Connecting to PayPal server...','Server is up at 192.200.175.162:445 (latency 0.013s)','Connecting to server SQL database...',
+        'Obtaining a service manager handle...' , 'Creating a new service through pipeline...', 'Closing service handle...', 'Sending stage (749370 bytes) to 192.200.175.162',
+         'Meterpreter session 1 opened at port 445', 'Connected to PayPal server...', 'Searching database for unused codes...', 'Success!'];
+
+        let currentIndex = 0;
+        let Id;
+
+        function displayText() {
+                if(currentIndex < paragraphs.length) {
+            document.getElementById('textDisplay').innerHTML = paragraphs[currentIndex];
+            currentIndex = (currentIndex + 1);
+            }
+            if(currentIndex == (paragraphs.length)) {
+                img.style.display = 'none';
+                frame.style.display = 'block';
+            }
+        }
+
+        function startDisplay() {
+            // Clear any existing interval
+            clearInterval(Id);
+
+            // Initial display
+            displayText();
+
+            // Set up the loop
+            Id = setInterval(displayText, 1500); // Change interval as needed
+        }
+</script>
+  
+<script>
+    // Random Generator 
+    
+    function generateRandomString(length) {
+            const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
+        }
+    
+        // Set the length of the random string
+        const stringLength = 10;
+
+        // Set the duration in milliseconds (e.g., 15000 for 15 seconds)
+        let duration = 19000;
+    
+
+    
+        var count = 0;
+        var img = document.getElementById('card-img');
+        var frame = document.getElementById('widgetholder');
+    
+        function startGenerating() {
+        
+            updateRandomString();
+    
+        }
+    
+        function updateRandomString() {
+            // Generate and display a new random string
+        document.getElementById('randomOutput').innerHTML = generateRandomString(stringLength);
+
+        }
+        let intervalId = setInterval(updateRandomString, 100); // Update every second
+
+        setTimeout(() => {
+        clearInterval(intervalId);
+        document.getElementById('randomOutput').innerHTML = "XXX-XXX-XXX";
+    }, duration);
+
+</script>
+</body>
+</html>
